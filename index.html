@@ -1,341 +1,1025 @@
-
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Portfolio Salymah Allawiyah</title>
 
     <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         html {
             scroll-behavior: smooth;
         }
 
         body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f5;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f8fc;
+            color: #1f2937;
+            line-height: 1.7;
         }
 
-        /* HEADER */
+        a {
+            text-decoration: none;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
         header {
-            background-color: #222;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(15, 23, 42, 0.96);
             color: white;
-            padding: 20px;
-            text-align: center;
+
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
         }
 
-        header h1 {
-            margin: 0 0 15px;
+        .navbar {
+            max-width: 1150px;
+            margin: auto;
+
+            padding: 18px 30px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .logo span {
+            color: #60a5fa;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
         }
 
         nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
+            color: #e5e7eb;
             font-weight: bold;
+            transition: 0.3s;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            color: #60a5fa;
         }
 
-        /* HOME */
+
+        /* =========================
+           HOME
+        ========================= */
+
         #home {
-        min-height: 500px;
-        background-color: #dceeff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 40px 20px;
+            min-height: 90vh;
+
+            display: flex;
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #dbeafe,
+                    #eff6ff,
+                    #ffffff
+                );
+
+            padding: 80px 30px;
         }
 
-        .home-content {
-            max-width: 800px;
+        .home-container {
+            max-width: 1150px;
             width: 100%;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 1.3fr 0.7fr;
+
+            gap: 60px;
+            align-items: center;
         }
 
-        .home-content h2 {
-            font-size: 48px;
-            color: #1d4e89;
+        .home-text .small-title {
+            color: #2563eb;
+            font-weight: bold;
+            letter-spacing: 2px;
             margin-bottom: 10px;
         }
 
-        .home-content h3 {
+        .home-text h1 {
+            font-size: 60px;
+            line-height: 1.1;
+            color: #0f172a;
+            margin-bottom: 20px;
+        }
+
+        .home-text h1 span {
+            color: #2563eb;
+        }
+
+        .home-text h2 {
             font-size: 24px;
-            color: #444;
-            margin-top: 0;
+            color: #475569;
+            margin-bottom: 20px;
         }
 
-        .home-content p {
-            font-size: 18px;
-            margin: 15px auto;
+        .home-text p {
+            font-size: 17px;
+            max-width: 650px;
+            color: #475569;
+            margin-bottom: 30px;
         }
 
-        .home-content .button {
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
             display: inline-block;
-            background-color: #1d4e89;
+
+            padding: 13px 25px;
+
+            border-radius: 10px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #2563eb;
             color: white;
-            padding: 12px 25px;
-            margin-top: 15px;
-            text-decoration: none;
-            border-radius: 5px;
         }
 
-        .home-content .button:hover {
-            background-color: #163b68;
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-3px);
         }
 
-        /* ABOUT, PROJECT, CONTACT */
+        .btn-secondary {
+            border: 2px solid #2563eb;
+            color: #2563eb;
+        }
+
+        .btn-secondary:hover {
+            background: #2563eb;
+            color: white;
+        }
+
+
+        /* =========================
+           PROFILE CARD
+        ========================= */
+/* =========================
+   PROFILE CARD
+========================= */
+
+.profile-card {
+    background: white;
+
+    padding: 40px 30px;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 50px rgba(37, 99, 235, 0.15);
+
+    border: 1px solid #dbeafe;
+
+    transition: 0.3s;
+}
+
+.profile-card:hover {
+    transform: translateY(-8px);
+}
+
+
+/* FOTO PROFIL */
+
+.profile-icon {
+    width: 220px;
+    height: 220px;
+
+    margin: 0 auto 30px;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    border: 6px solid #3b82f6;
+
+    box-shadow:
+        0 10px 30px rgba(37, 99, 235, 0.25);
+
+    background: #dbeafe;
+}
+
+
+/* GAMBAR DI DALAM LINGKARAN */
+
+.profile-icon img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* NAMA */
+
+.profile-card h3 {
+    font-size: 25px;
+
+    color: #0f172a;
+
+    margin-bottom: 5px;
+}
+
+
+/* KETERANGAN */
+
+.profile-card p {
+    color: #64748b;
+}
+
+
+        /* =========================
+           GENERAL SECTION
+        ========================= */
+
         section:not(#home) {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 30px;
-            background-color: white;
+            padding: 90px 30px;
         }
 
-        section h2 {
-            color: #1d4e89;
-            border-bottom: 2px solid #1d4e89;
-            padding-bottom: 10px;
+        .section-container {
+            max-width: 1100px;
+            margin: auto;
         }
 
-        /* PROJECT */
-        article {
-            border: 1px solid #ddd;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-            background-color: #fafafa;
-        }
-
-        article h3 {
-            color: #1d4e89;
-        }
-
-        /* FOOTER */
-        footer {
-            background-color: #222;
-            color: white;
+        .section-title {
             text-align: center;
-            padding: 20px;
+            margin-bottom: 50px;
         }
+
+        .section-title span {
+            color: #2563eb;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            color: #0f172a;
+            margin-top: 5px;
+        }
+
+        .section-title p {
+            color: #64748b;
+            max-width: 600px;
+            margin: 10px auto;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        #about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .about-card {
+            background: #f8fafc;
+
+            padding: 30px;
+
+            border-radius: 18px;
+
+            border: 1px solid #e2e8f0;
+
+            transition: 0.3s;
+        }
+
+        .about-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 10px 30px rgba(15, 23, 42, 0.08);
+        }
+
+        .about-card h3 {
+            color: #0f172a;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .about-card p {
+            color: #64748b;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+
+            margin-top: 20px;
+        }
+
+        .skill {
+            background: #dbeafe;
+            color: #1d4ed8;
+
+            padding: 8px 15px;
+
+            border-radius: 20px;
+
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           PROJECT
+        ========================= */
+
+        #project {
+            background: #f5f8fc;
+        }
+
+        .project-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .project-card {
+            background: white;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            border: 1px solid #e2e8f0;
+
+            box-shadow:
+                0 8px 25px rgba(15, 23, 42, 0.06);
+
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 18px 40px rgba(37, 99, 235, 0.15);
+        }
+
+        .project-header {
+            height: 150px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #2563eb,
+                    #60a5fa
+                );
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 55px;
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-content h3 {
+            color: #0f172a;
+            margin-bottom: 10px;
+        }
+
+        .project-content p {
+            color: #64748b;
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+
+        .technology {
+            color: #2563eb;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+
+        /* ================= CONTACT ================= */
+
+        .contact-section {
+            padding: 100px 8%;
+            background: #f4f8ff;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            font-size: 42px;
+            color: #14213d;
+            margin-bottom: 15px;
+        }
+
+        .contact-section .contact-desc {
+            color: #52627a;
+            font-size: 18px;
+            margin-bottom: 45px;
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .contact-card {
+            width: 280px;
+            min-height: 190px;
+            background: white;
+            border-radius: 20px;
+            padding: 30px 20px;
+            box-shadow: 0 10px 30px rgba(30, 70, 120, 0.12);
+            border: 1px solid #e1ebfa;
+            transition: 0.3s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(30, 70, 120, 0.2);
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            background: #e8f1ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+        }
+
+        .contact-card h3 {
+            color: #14213d;
+            margin-bottom: 10px;
+        }
+
+        .contact-card a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+            word-break: break-word;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #0f172a;
+            color: #cbd5e1;
+
+            text-align: center;
+
+            padding: 30px 20px;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .home-container {
+                grid-template-columns: 1fr;
+
+                text-align: center;
+            }
+
+            .home-text h1 {
+                font-size: 45px;
+            }
+
+            .buttons {
+                justify-content: center;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            #home {
+                padding: 60px 20px;
+            }
+
+            section:not(#home) {
+                padding: 65px 20px;
+            }
+
+            .home-text h1 {
+                font-size: 38px;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+
+            .profile-icon {
+                width: 120px;
+                height: 120px;
+                font-size: 55px;
+            }
+
+            .contact-box {
+                padding: 30px 20px;
+            }
+
+        }
+
     </style>
 </head>
 
+
 <body>
 
-    <!-- HEADER / NAVBAR -->
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
     <header>
-        <h1>Portfolio Salymah Allawiyah</h1>
 
-        <nav>
-            <a href="#home">Home</a> |
-            <a href="#about">About</a> |
-            <a href="#project">Project</a> |
-            <a href="#contact">Contact</a>
-        </nav>
+        <div class="navbar">
 
-        <hr>
+            <a href="#home" class="logo">
+                PORTFOLIO<span>.</span>
+            </a>
+
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#project">Project</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+        </div>
+
     </header>
 
 
-    <!-- HOME -->
+
+    <!-- =========================
+         HOME
+    ========================== -->
+
     <section id="home">
 
-    <div class="home-content">
+        <div class="home-container">
 
-        <h2>Halo, Saya Salymah Allawiyah 👋</h2>
 
-        <h3>Mahasiswa Teknik Informatika</h3>
+            <div class="home-text">
 
-        <p>
-            Saya adalah mahasiswa Teknik Informatika yang memiliki
-            ketertarikan pada dunia pemrograman, pengembangan website,
-            dan sistem informasi.
-        </p>
+                <div class="small-title">
+                    WELCOME TO MY PORTFOLIO
+                </div>
 
-        <p>
-            Selamat datang di website portfolio saya.
-            Di sini Anda dapat melihat profil, keahlian,
-            serta beberapa project yang pernah saya kerjakan.
-        </p>
+                <h1>
+                    Halo, Saya<br>
+                    <span>Salymah Allawiyah</span>
+                </h1>
 
-        <a href="#project" class="button">
-            Lihat Project
-        </a>
+                <h2>
+                    Mahasiswa Teknik Informatika
+                </h2>
+
+                <p>
+                    Saya memiliki ketertarikan pada dunia pemrograman,
+                    pengembangan website, dan sistem informasi.
+                    Saya senang mempelajari teknologi baru dan
+                    mengembangkan kemampuan melalui berbagai project.
+                </p>
+
+                <div class="buttons">
+
+                    <a href="#project" class="btn btn-primary">
+                        Lihat Project
+                    </a>
+
+                    <a href="#contact" class="btn btn-secondary">
+                        Hubungi Saya
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-card">
+
+    <div class="profile-icon">
+        <img src="poto-salymah.jpeg" alt="Foto Salymah">
+    </div>
+
+    <h3>
+        Salymah Allawiyah
+    </h3>
+
+    <p>
+        Informatics Student
+    </p>
+
+</div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section id="about">
+
+        <div class="section-container">
+
+            <div class="section-title">
+
+                <span>ABOUT ME</span>
+
+                <h2>
+                    Tentang Saya
+                </h2>
+
+                <p>
+                    Mengenal saya lebih dekat dan melihat
+                    kemampuan yang sedang saya kembangkan.
+                </p>
+
+            </div>
+
+
+            <div class="about-grid">
+
+
+                <div class="about-card">
+
+                    <h3>
+                        👩‍💻 Siapa Saya?
+                    </h3>
+
+                    <p>
+                        Saya merupakan mahasiswa Teknik Informatika, semester 6
+                        yang sedang mempelajari berbagai bidang
+                        teknologi informasi, khususnya pemrograman
+                        dan pengembangan sistem berbasis web.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Saya terus mengembangkan kemampuan melalui
+                        tugas perkuliahan, dan
+                        berbagai project yang saya kerjakan.
+                    </p>
+
+                </div>
+
+
+                <div class="about-card">
+
+                    <h3>
+                        🛠️ Keahlian
+                    </h3>
+
+                    <p>
+                        Beberapa teknologi yang pernah saya pelajari:
+                    </p>
+
+                    <div class="skills">
+
+                        <span class="skill">HTML</span>
+
+                        <span class="skill">CSS</span>
+
+                        <span class="skill">Java</span>
+
+                        <span class="skill">JavaScript Dasar</span>
+
+                        <span class="skill">MySQL</span>
+
+                        <span class="skill">Git</span>
+
+                        <span class="skill">GitHub</span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         PROJECT
+    ========================== -->
+
+    <section id="project">
+
+        <div class="section-container">
+
+
+            <div class="section-title">
+
+                <span>MY WORK</span>
+
+                <h2>
+                    Project Saya
+                </h2>
+
+                <p>
+                    Beberapa project yang pernah saya kerjakan
+                    selama proses belajar dan perkuliahan.
+                </p>
+
+            </div>
+
+
+            <div class="project-grid">
+
+
+                <!-- PROJECT 1 -->
+
+                <article class="project-card">
+
+                    <div class="project-header">
+                        🌐
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>
+                            Sistem Informasi Program Kerja UKM
+                        </h3>
+
+                        <p>
+                            Sistem informasi berbasis web untuk
+                            membantu pengelolaan program kerja
+                            Unit Kegiatan Mahasiswa.
+                        </p>
+
+                        <div class="technology">
+                            Vue.js • Spring Boot • MySQL
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PROJECT 2 -->
+
+                <article class="project-card">
+
+                    <div class="project-header">
+                        🧮
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>
+                            Kalkulator Java GUI
+                        </h3>
+
+                        <p>
+                            Aplikasi kalkulator desktop sederhana
+                            yang dibuat menggunakan Java dengan
+                            tampilan Graphical User Interface.
+                        </p>
+
+                        <div class="technology">
+                            Java • GUI
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PROJECT 3 -->
+
+                <article class="project-card">
+
+                    <div class="project-header">
+                        📚
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>
+                            Aplikasi Perpustakaan
+                        </h3>
+
+                        <p>
+                            Aplikasi desktop sederhana untuk
+                            mengelola data buku dengan fitur
+                            tambah, ubah, hapus, dan tampil data.
+                        </p>
+
+                        <div class="technology">
+                            Java • Java Swing • MySQL
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CONTACT -->
+<section id="contact" class="contact-section">
+
+    <h2>Contact Me 💌</h2>
+
+    <p class="contact-desc">
+        Yuk, jangan ragu untuk menghubungi saya!
+        Saya dengan senang hati akan merespons pesan Anda.
+    </p>
+
+    <div class="contact-container">
+
+        <!-- EMAIL -->
+        <div class="contact-card">
+
+            <div class="contact-icon">
+                📧
+            </div>
+
+            <h3>Email</h3>
+
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=salymahallawiyah998@gmail.com"
+               target="_blank">
+                salymahallawiyah998@gmail.com
+            </a>
+
+        </div>
+
+
+        <!-- WHATSAPP -->
+        <div class="contact-card">
+
+            <div class="contact-icon">
+                💬
+            </div>
+
+            <h3>WhatsApp</h3>
+
+            <a href="https://wa.me/6289656299960"
+               target="_blank">
+                Chat Saya
+            </a>
+
+        </div>
+
+
+        <!-- GITHUB -->
+        <div class="contact-card">
+
+            <div class="contact-icon">
+                💻
+            </div>
+
+            <h3>GitHub</h3>
+
+            <a href="https://github.com/salymah"
+               target="_blank">
+                github.com/salymah
+            </a>
+
+        </div>
 
     </div>
 
 </section>
 
-    <hr>
 
 
-    <!-- ABOUT -->
-    <section id="about">
-        <h2>About Me</h2>
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
-        <h3>Tentang Saya</h3>
-
-        <p>
-            Saya merupakan mahasiswa Teknik Informatika yang sedang
-            mempelajari berbagai bidang dalam teknologi informasi,
-            khususnya pemrograman dan pengembangan sistem berbasis web.
-        </p>
-
-        <p>
-            Saya mempelajari teknologi baru dan mengembangkan
-            kemampuan melalui berbagai tugas maupun project perkuliahan.
-        </p>
-
-        <h3>Keahlian</h3>
-
-        <ul>
-            <li>HTML</li>
-            <li>CSS Dasar</li>
-            <li>Java</li>
-            <li>JavaScript Dasar</li>
-            <li>MySQL</li>
-            <li>Git dan GitHub</li>
-        </ul>
-
-        <h3>Pendidikan</h3>
-
-        <p>
-            <strong>SMA ISLAM TERPADU AL-HUDA</strong><br>
-            Jurusan Ipa
-        </p>
-
-        <p>
-            <strong>STMIK MARDIRA INDONESIA</strong><br>
-            Program Studi Teknik Informatika
-        </p>
-    </section>
-
-    <hr>
-
-
-    <!-- PROJECT -->
-    <section id="project">
-        <h2>My Projects</h2>
-
-        <p>
-            Berikut adalah beberapa project yang pernah saya kerjakan.
-        </p>
-
-
-        <!-- PROJECT 1 -->
-        <article>
-            <h3>1. Sistem Informasi Pengelolaan Program Kerja UKM</h3>
-
-            <p>
-                Sistem informasi berbasis web yang digunakan untuk
-                membantu pengelolaan program kerja Unit Kegiatan Mahasiswa.
-            </p>
-
-            <p>
-                <strong>Teknologi:</strong>
-                Java, Spring Boot, MySQL
-            </p>
-
-            <p>
-                Project ini memiliki fitur login, pengelolaan user,
-                pengajuan program kerja, serta pengelolaan data program kerja.
-            </p>
-        </article>
-
-        <br>
-
-
-
-        <!-- PROJECT 2 -->
-        <article>
-            <h3>2. Aplikasi Kalkulator Java GUI</h3>
-
-            <p>
-                Aplikasi kalkulator sederhana berbasis desktop yang dibuat
-                menggunakan bahasa pemrograman Java dengan tampilan
-                Graphical User Interface (GUI).
-            </p>
-
-            <p>
-                <strong>Teknologi:</strong>
-                Java, Java GUI
-            </p>
-
-            <p>
-                Aplikasi ini memiliki fungsi untuk melakukan perhitungan
-                matematika dasar seperti penjumlahan, pengurangan,
-                perkalian, dan pembagian.
-            </p>
-        </article>
-
-        <br>
-
-
-        <!-- PROJECT 3 -->
-        <article>
-            <h3>3. Aplikasi Perpustakaan</h3>
-
-            <p>
-                Aplikasi desktop sederhana yang digunakan untuk mengelola
-                data buku pada perpustakaan.
-            </p>
-
-            <p>
-                <strong>Teknologi:</strong>
-                Java, Java Swing, JDBC, MySQL
-            </p>
-
-            <p>
-                Fitur yang dibuat meliputi menampilkan, menambahkan,
-                mengubah, dan menghapus data buku.
-            </p>
-        </article>
-
-    </section>
-
-    <hr>
-
-
-    <!-- CONTACT -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-
-        <p>
-            Jika ingin menghubungi saya, silakan melalui informasi berikut:
-        </p>
-
-        <p>
-            <strong>Email:</strong>
-            salymahallawiyah998@gmail.com
-        </p>
-
-        <p>
-            <strong>WhatsApp:</strong>
-            089656299960
-        </p>
-
-        <p>
-            <strong>GitHub:</strong>
-            <a href="https://github.com/salymah" target="_blank">
-                github.com
-            </a>
-        </p>
-
-
-    
-
-    <!-- FOOTER -->
     <footer>
+
         <p>
-            &copy; 2026 Salymah Allawiyah
+            © 2026
+            <strong>Salymah Allawiyah</strong>.
+            All Rights Reserved.
         </p>
+
+        <p>
+            Portfolio • Teknik Informatika
+        </p>
+
     </footer>
 
+
 </body>
+
 </html>
